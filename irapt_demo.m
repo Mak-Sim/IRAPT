@@ -2,7 +2,7 @@
 
 addpath('IRAPT_web');
 
-[Sig,Fs]=wavread('web_src/Demo.wav');
+[Sig,Fs]=audioread('web_src/Demo.wav');
 
 
 [F0, time_marks] = irapt(Sig, Fs, 'irapt1');

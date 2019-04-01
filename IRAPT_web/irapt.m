@@ -12,7 +12,7 @@ if(Fs~=44100)
 end
 
 [F0,~,Cfg] = irapt1(Sig');
-if (strcmpi(type,'ipart2'))
+if (strcmpi(type,'irart2'))
     F0 = irapt2(Cfg,Sig',F0);   %IRAPT2
 end
 

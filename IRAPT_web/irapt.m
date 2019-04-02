@@ -1,22 +1,30 @@
-function [ F0, time_marks ] = irapt(Sig, Fs, type)
+function [ F0, Voc, time_marks ] = irapt(sig, fs, est_type, sig_type)
 %IRAPT -- implementation of instanteneous RAPT algorithm.
-%  Sig -- input signal
-%  Fs  -- sampling frequency
-%  F0  -- f0 estimations
+%  sig -- input signal
+%  fs  -- sampling frequency
 %  time_marks -- corresponding time marks (in seconds)
-%  type -- 'irapt1' or 'irapt2'
+%  est_type --  estimator type ('irapt1' or 'irapt2')
+%  sig_type -- type of input signal ('speech' or 'sustain phonation')
+%  F0  -- f0 estimations
 
-if(Fs~=44100)
-    Sig=resample(Sig,44100,Fs);
-    Fs=44100;
+if(fs~=44100)
+    sig=resample(sig,44100,fs);
+    fs=44100;
 end
 
-[F0,~,Cfg] = irapt1(Sig');
-if (strcmpi(type,'irapt2'))
-    F0 = irapt2(Cfg,Sig',F0);   %IRAPT2
+% Stage 1
+if (strcmpi(sig_type,'speech'))
+    [F0,Voc,Cfg] = irapt1(sig');
+else
+    [F0,Voc,Cfg] = irapt_sus(sig');
 end
 
-time_marks = (0:length(F0)-1)*Cfg.step_smp/Fs;
+% Stage 2
+if (strcmpi(est_type,'irapt2'))
+    F0 = irapt2(Cfg,sig',F0);   %IRAPT2
+end
+
+time_marks = (0:length(F0)-1)*Cfg.step_smp/fs;
 
 end
 

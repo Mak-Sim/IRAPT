@@ -120,7 +120,8 @@ for N=2:Smp_valued_number %Consider minimization of D_vec
     
     En=sum(Amp.^2);
     En(En<10^-4)=10^-4;
-    Voc_value(N+Cfg.chunk_f0_size-1)=-min(Value_vec)./En;
+%     Voc_value(N+Cfg.chunk_f0_size-1)=-min(Value_vec)./En;
+    Voc_value(N)=-min(Value_vec)./En;
 end
 
 end

@@ -1,4 +1,4 @@
-function [F0, Voc, Cfg]=irapt1(Signal)
+function [F0, Voc, Cfg]=irapt_sus(Signal)
 
 %Global params
 Cfg.fs=44100;
@@ -89,7 +89,7 @@ Smp_valued_number=Smp_number-Cfg.chunk_f0_size+1;
 
 Chunk_n=Cfg.chunk_f0_size;
 
-[Amp_bank,Frc_bank,~]=TakeHParams_whole_sig(Signal,Cfg);
+[Amp_bank,Frc_bank,~]=TakeHParams_whole_sig_sus(Signal,Cfg);
 
 %Chunk initialization
 Value_matrix = ValueFunc_corr_line_FFT_interp(Amp_bank(1:Chunk_n,:)',Frc_bank(1:Chunk_n,:)',Cfg);

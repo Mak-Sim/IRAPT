@@ -14,7 +14,6 @@ legend('Estimated F0','True F0');
 xlabel('Time, sec','FontSize',12);
 ylabel('Frequency, Hz','FontSize',12);
 grid on;
-<<<<<<< HEAD
 
 %%
 [Sig,Fs]=audioread('web_src/001.wav');
@@ -26,6 +25,8 @@ figure;
 subplot(311)
 plot((0:length(Sig)-1)/Fs,Sig);
 xlabel('Time, sec','FontSize',12);
+
+title('Pathological voice (example)');
 
 subplot(312)
 plot(t_mark_sp,F0_sp,'LineWidth',1.5);
@@ -45,5 +46,3 @@ legend('IRAPT (speech)','IRAPT (sustain phonation)');
 xlabel('Time, sec','FontSize',12);
 ylabel('voiced/unvoiced','FontSize',12);
 grid on;
-=======
->>>>>>> 993d3733d932f2000e4a241bd832a40a4ac027dd

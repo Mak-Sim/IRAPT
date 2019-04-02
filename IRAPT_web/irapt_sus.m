@@ -27,13 +27,6 @@ Cfg.f0_limits = [65 450];
 Cfg.f0_max_step=2;       %Max F0 step in values of Cfg.chunk_f0_freqs  old value - 3
 Cfg.f0_freq_lines=(Cfg.FD+Cfg.FD/4:Cfg.FD/2:Cfg.fs_f0/2-Cfg.FD)';   %Freq grid for analysis
 
-%F0 params (whitening)
-Cfg.whiten_frame_smp=Cfg.frame_sub_smp;
-Cfg.whiten_step_smp=200;
-
-%Voiced unvoiced decision parameters
-Cfg.vu_freq_devision=3000;
-
 %% Instanteniuos correlation estimation params
 Cfg.corr_param.FFT_order=4096*4; % Must be even!
 Cfg.corr_param.FFT_freq_line_size=floor(Cfg.corr_param.FFT_order/2)+1;

@@ -5,10 +5,10 @@ IRAPT is a pitch estimation technique based on the robust algorithm for pitch tr
 Cite as
 ```
 @inproceedings{Azarov-12, 
-	author={Elias Azarov and Maxim Vashkevich and Alexander A. Petrovsky}, 
-	booktitle={Proc. of the 20th European Signal Processing Conference (EUSIPCO)}, 
-	title={Instantaneous pitch estimation based on {RAPT} framework}, 
-	year={2012}, 
-	pages={2787-2791}, 	
-	month={Aug}}
+ author={Elias Azarov and Maxim Vashkevich and Alexander A. Petrovsky}, 
+ booktitle={Proc. of the 20th European Signal Processing Conference (EUSIPCO)}, 
+ title={Instantaneous pitch estimation based on {RAPT} framework}, 
+ year={2012}, 
+ pages={2787-2791}, 	
+ month={Aug}}
 ```

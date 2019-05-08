@@ -1,5 +1,15 @@
 % IRAPT demo
 
+% Cite as
+% @inproceedings{Azarov-12, 
+% 	author={Elias Azarov and Maxim Vashkevich and Alexander A. Petrovsky}, 
+% 	booktitle={Proc. of the 20th European Signal Processing Conference (EUSIPCO)}, 
+% 	title={Instantaneous pitch estimation based on {RAPT} framework}, 
+% 	year={2012}, 
+% 	pages={2787-2791}, 	
+% 	month={Aug}}
+
+
 addpath('IRAPT_web');
 
 [Sig,Fs]=audioread('web_src/Demo.wav');

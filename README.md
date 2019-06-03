@@ -37,11 +37,11 @@ The main ideas behind the algorithm are:
 ### Pitch estimation scheme
 The pitch estimation scheme provides two pitch estimations: initial pitch estimation (denoted as "IRAPT 1") and recalculated pitch in time warped domain 
 (denoted as "IRAPT 2").
-<img src="image/irapt_scheme.gif" width="630"/>
+<img src="image/irapt_scheme.png" width="630"/>
 
 
 ### Estimation of instantaneous harmonic parameters
-The signal _s(m)_ is decomposed into overlapping bandlimited analytical signals  
+The signal <img src="image/sm.png" width="35"/> is decomposed into overlapping bandlimited analytical signals  
 <img src="image/Sff.png" width="65"/>: <br>
 <img src="image/sin_model.png" width="400"/> <br>
 where <img src="image/2F_delta.png" width="25"/> - bandwidth and <img src="image/F_c_i.png" width="18"/> - center frequency of the i-th band and <img src="image/w_n.png" width="35"/> - an even window function. Then instantaneous parameters are evaluated as
@@ -50,6 +50,7 @@ where <img src="image/2F_delta.png" width="25"/> - bandwidth and <img src="image
 <li>frequency <img src="image/Frc.png" width="250"/></li>
 <li>phase <img src="image/Phs.png" width="220"/></li>
 </ul>
+
 where <img src="image/R_m.png" width="35"/> and <img src="image/I_m.png" width="35"/> are real and imaginary parts of <img src="image/Sff.png" width="65"/> respectively.
 
 ### Period candidate generating function
@@ -198,7 +199,7 @@ The proposed technique is compared with other pitch estimation algorithms in ter
 </table>
 
 ### Conclusions
-<p>An instantaneous pitch estimation algorithm has been proposed. The algorithm has low sensitivity to rapid pitch modulations and provides accurate values with high time/frequency resolution. Due to its properties the algorithm can be useful in various applications such as speech analysis/synthesis and automatic rotational frequency tracking for mechanical devices. </p>
+An instantaneous pitch estimation algorithm has been proposed. The algorithm has low sensitivity to rapid pitch modulations and provides accurate values with high time/frequency resolution. Due to its properties the algorithm can be useful in various applications such as speech analysis/synthesis and automatic rotational frequency tracking for mechanical devices. 
 
 ### Reference
 <p>[1] D. Talkin, "A Robust Algorithm for Pitch Tracking (RAPT)" in "Speech Coding & Synthesis", W B Kleijn, K K Paliwal eds, Elsevier ISBN 0444821694, 1995. </p>
